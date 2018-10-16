@@ -9,16 +9,19 @@ sudo apt-get update
 sudo apt-get install python3
 sudo apt-get upgrade
 
+#Instalar Apache
+sudo apt-get install apache2
+
+sudo a2enmod rewrite
+
 #Instalar Mysql
 wget http://dev.mysql.com/get/mysql-apt-config_0.8.10-1_all.deb
 sudo dpkg -i mysql-apt-config_0.8.10-1_all.deb
 sudo apt-get update
 sudo apt-get install mysql-server
+rm mysql-apt-config_0.8.10-1_all.deb
 
-#Instalar Apache
-sudo apt-get install apache2
 
-sudo a2enmod rewrite
 
 #Intalar PHP
 sudo apt-get update 
@@ -38,3 +41,15 @@ sudo apt-get install libapache2-mod-php7.2 libargon2-0 libsodium23 libssl1.1 php
 sudo apt-get upgrade
 sudo apt-get install php-pear php7.2-curl php7.2-dev php7.2-gd php7.2-mbstring php7.2-zip php7.2-mysql php7.2-xml
 sudo apt-get upgrade
+
+#Instalar No-Ip
+sudo su
+wget http://www.no-ip.com/client/linux/noip-duc-linux.tar.gz
+tar xzf noip-duc-linux.tar.gz
+cd no-ip-2.1.9
+make
+make install
+exit
+
+sudo get update
+sudo get upgrade
