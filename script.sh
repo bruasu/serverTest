@@ -11,7 +11,6 @@ sudo apt-get upgrade
 
 #Instalar Apache
 sudo apt-get install apache2
-
 sudo a2enmod rewrite
 
 #Intalar PHP
